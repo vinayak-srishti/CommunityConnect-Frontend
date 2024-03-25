@@ -1,6 +1,23 @@
-import React from 'react'
+import React, {useState} from 'react'
 import img3 from './Image/password.jpeg'
 function Password() {
+  const [data,setdata]=useState({password:'',newpass:''})
+  const change=(a)=>{
+    console.log(a)
+    setdata({...data,[a.target.name]:a.target.value})
+  }
+  console.log(data)
+  const submit=(a)=>{
+    a.preventDefault()
+    console.log('saved')
+    //axios.post('https://jsonplaceholder.typicode.com/posts',data)
+    //.then((result)=>{
+      //console.log(result)
+    //})
+    //.catch((error)=>{
+    //  console.log(error)
+    //})
+  }
   return (
     <div>
      <section>
@@ -44,27 +61,32 @@ function Password() {
 
 </nav>
 </div><br/>
+<form onSubmit={submit}>
         <div className='input-container1'>
-          
          <div class="col-auto">
            <label for="inputPassword2" class="visually-hidden">Password</label>
-          <input type="password" class="form-control" id="inputPassword2" placeholder="Password"/>
+          <input type="password" class="form-control" onChange={change} name='password' onDragStart={data.password} id="inputPassword2" placeholder="Password"/>
          </div>
          
          <div class="col-auto">
             <label for="inputPassword2" class="visually-hidden">Password</label>
-            <input type="password" class="form-control"  id="inputPassword2" placeholder="Password"/>
+            <input type="password" class="form-control" onChange={change} name='newpass' data={data.newpass}  id="inputPassword2" placeholder="New Password"/>
          </div>
+         
         </div><br/>
-        <button type="button" class="btn btn-primary" style={{width:'130px'}}>Change</button><br/>
+        
+        <button type="submit" class="btn btn-primary" style={{width:'130px'}}>Change</button><br/>
         <div className='inp1'>
         <label for="exampleFormControlInput1" class="form-label">New User</label>
         <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="#">
 Sign up
 </a>
+
 </div>
+</form>
 
       </div>
+    
      </section>
     </div>
   )

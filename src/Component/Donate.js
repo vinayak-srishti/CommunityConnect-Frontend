@@ -1,7 +1,24 @@
-import React from 'react'
+import React, {useState} from 'react'
 import img6 from './Image/thing.jpeg'
 import Footer from './Inc/Footer'
 function Donate() {
+  const[data,setdata]=useState({donate:''})
+  const change=(b)=>{
+    console.log(b)
+    setdata({...data,[b.target.name]:b.target.value})
+  }
+  console.log(data)
+  const submit=(b)=>{
+    b.preventDefault(b)
+    console.log('Save')
+    //axios.post('https://jsonplaceholder.typicode.com/posts',data)
+    //.then((result)=>{
+    //  console.log(result)
+    //})
+    //.catch((error)=>{
+    //   console.log(error)
+    // })
+  }
   return (
     <div>
         <section>
@@ -17,69 +34,63 @@ function Donate() {
 
         <section className='app1'>
            <div class='reg2'>
-           <div class="input-group mb-3" >
-  <button class="btn btn-outline-secondary" style={{background:'blue',color:'white'}} type="button" id="button-addon1">Donate</button>
-  <input type="text" class="form-control" style={{background:'#efefef'}} placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1"/>
-</div>
-
+           <div class='container' style={{background:'#efefef'}} >
+           <div class="small-4 cell text-left "> 
+                    <label for="input-label" 
+                           class="text-left " style={{backgroundColor:'blue',textAlign:'left'}}>Donate 
+                    </label> 
+                </div> 
+           
+           </div><br/>
+   
              <div class='regcontainer1'>
-             <input type="text" class="form-control" style={{background:'#efefef'}} id="exampleFormControlInput1" placeholder="Enter your contribution"/><br/>
-             <button type="button" class="btn btn-primary" style={{width:'100px'}}>Pay</button> <br/>
+              <form onSubmit={submit}>
+             <input type="text" class="form-control" onChange={change} name='donate' data={data.donate}  style={{background:'#efefef'}} id="exampleFormControlInput1" placeholder="Enter your contribution"/><br/>
+             <button type="submit" class="btn btn-primary" style={{width:'100px'}}>Pay</button> <br/>
+             </form>
              </div>
            </div>
            
         </section>
         <section>
           <div class='container'>
-          <table class="table">
+          <table class="table table-borderless">
   <thead >
     <tr >
       
-      <th scope="col" style={{background:' #ff3300'}}>Date</th>
-      <th scope="col" style={{background:' #ff3300',textAlign:'center'}}>Amount</th>
+      <th scope="col" style={{background:' #ff3300',fontFamily:'cursive'}}>Date</th>
+      <th scope="col" style={{background:' #ff3300',textAlign:'center',fontFamily:'cursive'}}>Amount</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       
-      <td style={{background:'#efefef'}}><input type="date"  />
-</td>
-      <td style={{background:'#efefef',textAlign:'center'}}>20k</td>
+      <td style={{background:'#efefef'}}><input type="date" class='border-0' style={{background:'#efefef',fontFamily:'cursive',color:'#707070'}}  /></td>
+      <td style={{background:'#efefef',textAlign:'right'}}><input type="" class='border-0' placeholder=' 20k' style={{background:'#efefef',fontFamily:'cursive'}} /></td>
     </tr>
     <tr>
-    <td style={{background:'#efefef'}}><input type='date'/></td>
-      <td style={{background:'#efefef',textAlign:'center'}}>20k</td>
-
+    <td style={{background:'#efefef'}}><input type="date" class='border-0' style={{background:'#efefef',fontFamily:'cursive',color:'#707070'}}  /></td>
+    <td style={{background:'#efefef',textAlign:'center'}}><input type="" class='border-0' placeholder='20k' style={{background:'#efefef',fontFamily:'cursive'}} /></td>
     </tr>
     <tr>
-    <td style={{background:'#efefef'}}><input type='date'/></td>
-      <td style={{background:'#efefef',textAlign:'center'}}>20k</td>  
-    
+    <td style={{background:'#efefef'}}><input type="date" class='border-0' style={{background:'#efefef',fontFamily:'cursive',color:'#707070'}}  /></td>
+    <td style={{background:'#efefef',textAlign:'center'}}><input type="" class='border-0' placeholder='20k' style={{background:'#efefef',fontFamily:'cursive'}} /></td>
     </tr>
     <tr>
-    <td style={{background:'#efefef'}}><input type='date'/></td>
-      <td style={{background:'#efefef',textAlign:'center'}}>20k</td>  
-    
+    <td style={{background:'#efefef'}}><input type="date" class='border-0' style={{background:'#efefef',fontFamily:'cursive',color:'#707070'}}  /></td>
+    <td style={{background:'#efefef',textAlign:'center'}}><input type="" class='border-0' placeholder='20k' style={{background:'#efefef',fontFamily:'cursive'}} /></td>
     </tr>
     <tr>
-    <td style={{background:'#efefef'}}><input type='date'/></td>
-      <td style={{background:'#efefef',textAlign:'center'}}>20k</td>  
-    
+    <td style={{background:'#efefef'}}><input type="date" class='border-0' style={{background:'#efefef',fontFamily:'cursive',color:'#707070'}}  /></td>
+    <td style={{background:'#efefef',textAlign:'center'}}><input type="" class='border-0' placeholder='20k' style={{background:'#efefef',fontFamily:'cursive'}} /></td>
     </tr>
     <tr>
-    <td style={{background:'#efefef'}}><input type='date'/></td>
-      <td style={{background:'#efefef',textAlign:'center'}}>20k</td>  
-    
+    <td style={{background:'#efefef'}}><input type="date" class='border-0' style={{background:'#efefef',fontFamily:'cursive',color:'#707070'}}  /></td>
+    <td style={{background:'#efefef',textAlign:'center'}}><input type="" class='border-0' placeholder='20k' style={{background:'#efefef',fontFamily:'cursive'}} /></td>
     </tr>
     <tr>
-    <td style={{background:'#efefef'}}><input type='date'/></td>
-      <td style={{background:'#efefef',textAlign:'center'}}>20k</td>  
-    
-    </tr>
-    <tr>
-    <td style={{background:'#efefef'}}><input type='date'/></td>
-      <td style={{background:'#efefef',textAlign:'center'}}>20k</td>  
-    
+    <td style={{background:'#efefef'}}><input type="date" class='border-0' style={{background:'#efefef',fontFamily:'cursive',color:'#707070'}}  /></td>
+    <td style={{background:'#efefef',textAlign:'center'}}><input type="" class='border-0' placeholder='20k' style={{background:'#efefef',fontFamily:'cursive'}} /></td>
     </tr>
   </tbody>
 </table>

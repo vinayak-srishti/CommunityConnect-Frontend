@@ -1,8 +1,25 @@
-import React from 'react'
+import React, {useState} from 'react'
 import img5 from './Image/ocean.jpg'
 import Footer from './Inc/Footer'
 
 function Logreg() {
+  const [data,setdata]=useState({users:'',name:'',username:'',orgname:'',password:''})
+  const change=(a)=>{
+    console.log(a)
+    setdata({...data,[a.target.name]:a.target.value})
+  }
+  console.log(data)
+  const submit=(a)=>{
+    a.preventDefault()
+    console.log('saved')
+    //axios.post('https://jsonplaceholder.typicode.com/posts',data)
+    //.then((result)=>{
+      //console.log(result)
+    //})
+    //.catch((error)=>{
+    //  console.log(error)
+    //})
+  }
   return (
     <div>
        <section>
@@ -44,26 +61,29 @@ function Logreg() {
         </div>
       </div>
     </div><br/>
+    <form onSubmit={submit}>
   <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" style={{width:'230px',background:'#efefef',color:'#808080'}} type="button" data-bs-toggle="dropdown" aria-expanded="false">
-       Select User Type
-      </button>
-      <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">User</a></li>
-      <li><a class="dropdown-item" href="#">Organization</a></li>
-       <li><a class="dropdown-item" href="#">Orphanage</a></li>
-      </ul>
+  
+            <select class="form-select" style={{color:'gray'}} onChange={change} name='users' value={data.users} aria-label="Default select example">
+  <option selected>Select User type</option>
+  <option value="User">User</option>
+  <option value="Organization">Organisation</option>
+  <option value="Orphanage">Orphanage</option>
+</select>
+
        </div><br/>
        <div className='regcontainer'>
         
-          <input type="text" class="form-control" style={{background:'#efefef'}} id="exampleFormControlInput1" placeholder="Name"/>
-          <input type="text" class="form-control" style={{background:'#efefef'}} id="exampleFormControlInput1" placeholder="Username"/>
-          <input type="text" class="form-control" style={{background:'#efefef'}} id="exampleFormControlInput1" placeholder="Organisation name"/>
-          <input type="password" class="form-control" style={{background:'#efefef'}} id="exampleFormControlInput1" placeholder="Password"/>
+          <input type="text" class="form-control" onChange={change} name="name" data={data.name} style={{background:'#efefef'}} id="exampleFormControlInput1" placeholder="Name"/>
+          <input type="text" class="form-control" onChange={change} name="username" data={data.username} style={{background:'#efefef'}} id="exampleFormControlInput1" placeholder="Username"/>
+          <input type="text" class="form-control" onChange={change} name="orgname" data={data.orgname}style={{background:'#efefef'}} id="exampleFormControlInput1" placeholder="Organisation name"/>
+          <input type="password" class="form-control" onChange={change} name="password" data={data.password} style={{background:'#efefef'}} id="exampleFormControlInput1" placeholder="Password"/>
           
           </div> <br/>
-          <button type="button" class="btn btn-primary" style={{width:'100px'}}>Login</button> <br/>   
+          <button type="submit" class="btn btn-primary" style={{width:'100px'}}>Login</button> <br/>  
+          </form> 
   </div>
+  
   </section><br/><br/><br/><br/><br/><br/>
 
 
