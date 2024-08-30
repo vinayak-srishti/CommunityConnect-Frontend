@@ -1,0 +1,43 @@
+.container {
+    max-width: 900px;
+}
+
+.card-header {
+    background-color: #f7f7f7;
+    padding: 15px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 2px solid #dee2e6;
+}
+
+.card-body {
+    padding: 30px;
+}
+
+h5, h6 {
+    color: #333;
+}
+
+.personal-info, .address-info {
+    border: 1px solid #dee2e6;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.personal-info h6, .address-info h6 {
+    margin-bottom: 15px;
+    color: #495057;
+}
+
+button.btn-outline-secondary {
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 5px;
+}

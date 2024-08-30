@@ -1,0 +1,17 @@
+.card-container11 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .card12 {
+    flex: 1 0 18rem; 
+    max-width: 18rem;
+  }
+  
+  .card img1 {
+    height: 200px;
+    object-fit: cover; 
+  }
+  

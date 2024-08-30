@@ -1,0 +1,139 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 40px;
+}
+
+.dashboard-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #333;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card1 {
+    width: 300px;
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.card-users {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+.card-orphanages {
+    background: linear-gradient(135deg, #ff9966, #ff5e62);
+}
+
+.card-info h5 {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.card-info h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+/* General Styles */
+.sidebar-container {
+    width: 250px;
+    height: 100vh;
+    background: linear-gradient(135deg, #2a2a72, #009ffd);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+  }
+  
+  .profile-section {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+  }
+  
+  .admin-name {
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: #fff;
+  }
+  
+  .sidebar-links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .sidebar-link {
+    width: 100%;
+    padding: 15px 20px;
+    margin: 5px 0;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #fff;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .sidebar-link:hover {
+    background-color: #1a1a40;
+    color: #00c9ff;
+    border-radius: 10px;
+  }
+  
+  .logout-btn {
+    width: 100%;
+    padding: 15px 20px;
+    margin-top: auto;
+    background-color: #ff4d4d;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background 0.3s;
+  }
+  
+  .logout-btn:hover {
+    background-color: #cc0000;
+  }
+  

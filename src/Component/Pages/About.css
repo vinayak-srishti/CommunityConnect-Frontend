@@ -1,0 +1,122 @@
+/* Container for the entire About Us page */
+.about-us-container {
+  font-family: Arial, sans-serif;
+}
+
+/* Hero Section */
+.about-us-hero {
+  background-color: #f9f9f9;
+  padding: 50px 20px;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Service Sections */
+.about-us-services {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #fff;
+}
+
+.service-card {
+  flex: 1;
+  max-width: 300px;
+  margin: 0 20px;
+  text-align: center;
+}
+
+.service-image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.service-card h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 20px;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.service-button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.service-button:hover {
+  background-color: #0056b3;
+}
+
+/* CTA Section */
+.about-us-cta {
+  background-color: #f9f9f9;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.about-us-cta h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.about-us-cta p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.cta-buttons {
+  margin-top: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  margin-right: 15px;
+  color: white;
+}
+
+.cta-donate {
+  background-color: #007bff;
+}
+
+.cta-support {
+  background-color: #28a745;
+}
+
+.cta-button:hover {
+  opacity: 0.9;
+}
